@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkFinder - Discover Parks Near You</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-tree"></i>
+                    ParkFinder
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <a href="#">Home</a>
+                    <a href="#">Parks</a>
+                    <a href="#">Cities</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-outline"><i class="fas fa-sign-in-alt"></i> Login</button>
+                    <button class="btn btn-primary"><i class="fas fa-user-plus"></i> Sign Up</button>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Amazing Parks Near You</h1>
+            <p>Find, explore, and share your favorite outdoor spaces with our community</p>
+            <div class="search-container">
+                <input type="text" placeholder="Search by city, park name, or amenity...">
+                <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why ParkFinder?</h2>
+                <p>Our platform helps nature lovers find the perfect outdoor experience</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Discover Parks</h3>
+                    <p>Find parks near you with detailed information on amenities, trails, and facilities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Rate & Review</h3>
+                    <p>Share your experiences and help others find the best parks in your area.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Driven</h3>
+                    <p>Contribute by adding new parks and updating information about existing ones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parks section -->
+    <section class="parks">
+        <div class="container">
+            <div class="parks-header">
+                <div>
+                    <h2>Popular Parks</h2>
+                    <p>Top-rated parks in your region</p>
+                </div>
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">All Parks</button>
+                    <button class="filter-btn" data-filter="playground">With Playgrounds</button>
+                    <button class="filter-btn" data-filter="dog">Dog Friendly</button>
+                    <button class="filter-btn" data-filter="hiking">Hiking Trails</button>
+                </div>
+            </div>
+            <div class="parks-grid" id="parksContainer">
+                <!-- Park cards will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Users Say</h2>
+                <p>Join thousands of happy park explorers</p>
+            </div>
+            <div class="testimonials-grid" id="testimonialsContainer">
+                <!-- Testimonials will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Explore?</h2>
+            <p>Join our community of park lovers today and start discovering amazing outdoor spaces near you</p>
+            <div class="cta-buttons">
+                <button class="btn btn-light"><i class="fas fa-download"></i> Download App</button>
+                <button class="btn btn-outline"><i class="fas fa-globe"></i> Browse Parks</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-envelope"></i> info@parkfinder.com</a></li>
+                        <li><a href="#"><i class="fas fa-phone"></i> (555) 123-4567</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> 123 Park Avenue</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Parks</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Cities</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Park Guidelines</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Safety Tips</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Seasonal Activities</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ParkFinder. All rights reserved. | Designed with <i class="fas fa-heart"></i> for nature lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
